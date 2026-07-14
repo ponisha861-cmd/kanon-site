@@ -1,0 +1,280 @@
+@font-face {
+    font-family: DM;
+    src: url("../font/Doran/Doran-Medium.ttf");
+}
+
+@font-face {
+    font-family: DR;
+    src: url("../font/Doran/Doran-Regular.ttf");
+}
+
+@font-face {
+    font-family: DL;
+    src: url("../font/Doran/Doran-Light.ttf");
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:url("../img/bg.png") center/cover no-repeat;
+
+    min-height:100vh;
+
+    padding:25px;
+
+    overflow-x:hidden;
+}
+
+/*================ HEADER =================*/
+
+header{
+
+    width:min(95%,1450px);
+
+    height:150px;
+
+    margin:0 auto 160px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid #b2cbe0;
+
+    border-radius:35px;
+
+    backdrop-filter:blur(4px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+}
+
+header img{
+
+    width:clamp(90px,10vw,140px);
+
+    height:auto;
+}
+
+/*================ CLASSES =================*/
+
+.box-class{
+
+    width:min(1400px,100%);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+}
+
+/*================ CARD =================*/
+
+.tajvid,
+.ahkam{
+
+    width:min(100%,500px);
+
+    min-height:200px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 30px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:35px;
+
+    backdrop-filter:blur(4px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+    transition:.3s;
+}
+
+.tajvid:hover,
+.ahkam:hover{
+
+    transform:translateY(-5px);
+}
+
+.tajvid span,
+.ahkam span{
+
+    color:#fff;
+
+    font-family:DM;
+
+    font-size:clamp(22px,2vw,30px);
+
+    text-align:center;
+}
+
+.tajvid img{
+
+    width:230px;
+
+    max-width:45%;
+
+    height:auto;
+}
+
+.ahkam img{
+
+    width:160px;
+
+    max-width:40%;
+
+    height:auto;
+}
+
+/*================ TABLET =================*/
+
+@media (max-width:992px){
+
+header{
+
+    height:130px;
+}
+
+.box-class{
+
+    gap:30px;
+}
+
+.tajvid,
+.ahkam{
+
+    width:90%;
+}
+
+}
+
+/*================ MOBILE =================*/
+
+@media (max-width:768px){
+
+body{
+
+    padding:15px;
+}
+
+header{
+
+    width:100%;
+
+    height:100px;
+
+    border-radius:20px;
+
+    margin-bottom:30px;
+}
+
+header img{
+
+    width:80px;
+}
+
+.box-class{
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.tajvid,
+.ahkam{
+
+    width:100%;
+
+    min-height:160px;
+
+    padding:20px;
+
+    border-radius:25px;
+}
+
+.tajvid span,
+.ahkam span{
+
+    font-size:22px;
+}
+
+.tajvid img{
+
+    width:150px;
+}
+
+.ahkam img{
+
+    width:130px;
+}
+
+}
+
+/*================ SMALL MOBILE =================*/
+
+@media (max-width:480px){
+
+header{
+
+    height:85px;
+}
+
+header img{
+
+    width:65px;
+}
+
+.tajvid,
+.ahkam{
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    gap:15px;
+
+    text-align:center;
+
+    padding:25px 15px;
+}
+
+.tajvid img,
+.ahkam img{
+
+    width:120px;
+
+    max-width:100%;
+
+    margin:0;
+}
+
+.tajvid span,
+.ahkam span{
+
+    margin:0;
+
+    font-size:20px;
+}
+
+}
